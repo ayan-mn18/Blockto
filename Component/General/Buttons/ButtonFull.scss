@@ -1,0 +1,28 @@
+$primary-btn-color: #DB8C09;
+$secondary-btn-color: #111111;
+
+$text: #fff;
+
+.buttonFull {
+    padding: 12px ;
+    border-radius: 8px;
+    height: 52px;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.primary {
+    background-color: $primary-btn-color;
+}
+
+.secondary {
+    background-color: $secondary-btn-color;
+}
+
+.buttonText {
+    color: $text;
+    font-weight: 500;
+    font-size: 16px;
+    height: 24px;
+    align-self: center;
+}

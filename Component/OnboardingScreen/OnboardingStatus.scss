@@ -1,0 +1,19 @@
+.componentContainer { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-around;
+}
+
+.statusBar {
+    height: 3px;
+    background-color: #fff;
+    width: 31%;
+    opacity: 0.2;
+}
+
+.active {
+    opacity: 1;
+}

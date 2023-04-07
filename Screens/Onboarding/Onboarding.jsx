@@ -19,8 +19,18 @@ const Onboarding = ({ onboardingScreenNumber, image, imageStyle, skippable, head
                 <Text style={OnboardingStyles.desc} >
                     {text.Onboarding.OnboardingDesc}
                 </Text>
-                <ButtonFull buttonType={text.Buttons.primary} onboardingScreenNumber={onboardingScreenNumber} NextOnboardingPage={NextOnboardingPage} buttonContent={text.Onboarding.Continue} />
-                {skippable && <ButtonFull buttonType={text.Buttons.secondary} skippable SkipOnboarding={SkipOnboarding} buttonContent={text.Onboarding.Skip} />}
+                <ButtonFull
+                    buttonType={text.Buttons.primary}
+                    onboardingScreenNumber={onboardingScreenNumber}
+                    buttonContent={text.Onboarding.Continue}
+                    OnClick={NextOnboardingPage}
+                />
+                {skippable &&
+                    <ButtonFull
+                        buttonType={text.Buttons.secondary}
+                        OnClick={SkipOnboarding}
+                        buttonContent={text.Onboarding.Skip}
+                    />}
             </View>
         </ScrollView>
     )

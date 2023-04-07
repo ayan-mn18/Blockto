@@ -1,9 +1,6 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import React, { useRef } from 'react';
 import ViewPager from '@react-native-community/viewpager';
-import Onboarding1 from './Onboarding1';
-import Onboarding2 from './Onboarding2';
-import Onboarding3 from './Onboarding3';
 import Onboarding from './Onboarding';
 import text from '../../TextList/text';
 import Onboarding1Img from '../../assets/Onboarding/Onboarding1.png';
@@ -17,7 +14,6 @@ const OnboardingView = () => {
     const navigation = useNavigation();
 
     const SkipOnboarding = () => {
-        // pagerRef.current.setPage(2);
         navigation.navigate('Login')
     }
 
@@ -76,7 +72,6 @@ export default OnboardingView;
 
 const styles = StyleSheet.create({
     container: {
-        // width: "100%",
         height: "100%"
     },
     screenContainer: {

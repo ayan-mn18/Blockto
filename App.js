@@ -21,6 +21,8 @@ export default function App() {
       <AppStack.Navigator screenOptions={{ headerShown: false }}>
         <AppStack.Screen name="OnboardingView" component={OnboardingView} />
         <AppStack.Screen name="Login" component={Login} />
+        <AppStack.Screen name="Signup" component={Login} />
+        <AppStack.Screen name="SignupCode" component={Login} />
       </AppStack.Navigator>
     </NavigationContainer>
   );

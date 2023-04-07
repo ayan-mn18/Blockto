@@ -5,7 +5,7 @@ import OnboardingStatus from '../../Component/OnboardingScreen/OnboardingStatus'
 import text from '../../TextList/text';
 import ButtonFull from '../../Component/General/Buttons/ButtonFull';
 
-const Onboarding = ({ onboardingScreenNumber, image, imageStyle, skippable, heading }) => {
+const Onboarding = ({ onboardingScreenNumber, image, imageStyle, skippable, heading, SkipOnboarding, NextOnboardingPage }) => {
     return (
         <ScrollView style={OnboardingStyles.screenContainer} >
             <OnboardingStatus onboardingScreenNumber={onboardingScreenNumber} />
@@ -19,8 +19,8 @@ const Onboarding = ({ onboardingScreenNumber, image, imageStyle, skippable, head
                 <Text style={OnboardingStyles.desc} >
                     {text.Onboarding.OnboardingDesc}
                 </Text>
-                <ButtonFull buttonType={text.Buttons.primary} buttonContent={text.Onboarding.Continue} />
-                {skippable && <ButtonFull buttonType={text.Buttons.secondary} buttonContent={text.Onboarding.Skip} />}
+                <ButtonFull buttonType={text.Buttons.primary} onboardingScreenNumber={onboardingScreenNumber} NextOnboardingPage={NextOnboardingPage} buttonContent={text.Onboarding.Continue} />
+                {skippable && <ButtonFull buttonType={text.Buttons.secondary} skippable SkipOnboarding={SkipOnboarding} buttonContent={text.Onboarding.Skip} />}
             </View>
         </ScrollView>
     )
